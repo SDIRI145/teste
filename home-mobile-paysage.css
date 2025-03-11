@@ -1,0 +1,282 @@
+/* --- Styles pour la page d'accueil - version Mobile --- */
+
+@media (max-width: 768px) {
+    /* Styles pour la barre de navigation */
+    nav {
+        /* Fixe la barre de navigation en haut de la page même en cas de défilement. */
+        position: fixed;
+        background-color: #F4F4F4;
+        width: 100%;
+        /* Centre les éléments horizontalement et vertiacalement */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* Place la barre de navigation au-dessus des autres éléments. */
+        z-index: 1;
+        /* Ajoute une ombre légère à la barre de navigation. */
+        box-shadow: 4px 4px 16px rgb(0 0 0 / 20%);
+        top: 0;
+        left: 0;
+    }
+    /* Rendre le menu de la barre de navigation invisible */
+    nav li {
+        display: none;
+    }
+    /* Rendre le bouton de la barre de navigation invisible */
+    #ul-btn {
+        display: none;
+    }
+    /* Styles pour les liens */
+    a {
+        text-decoration: none;
+        color: #049585;
+    }
+    /* Styles pour le logo */
+    #logo {
+        width: 30%;
+    }
+    /* Rendre le menu burger visibe */
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+    /* Styles pour le menu  */
+    .menu div {
+        width: 35px;
+        height: 3px;
+        background-color: #049585;
+        margin: 7px;
+    }
+    /* Styles pour les articles sur la page d'accueil */
+    .article-Home {
+        padding-top: 70px;
+        margin-bottom: 50px;
+    }
+    /* Styles pour l'en-tête */
+    header {
+        display: block;
+        width: 90%;
+        /*calc((16/9)*90%)*/
+        height: auto;
+        margin: 0 auto;
+        padding-bottom: 0px;
+        border-radius: 30px;
+        /* Dégradé de couleur pour l'arrière-plan de l'en-tête */
+        background: linear-gradient(to right, #83DDD3, #CBF5F1);
+        justify-content: space-between;
+    }
+    /* Styles pour les images et lorsqu'elles sont survolées */
+    .img {
+        width: fit-content;
+        height: fit-content;
+    }
+    .img:hover {
+        transform: rotate(5deg) scale(0.8);
+        transition: 0.3s ease-in-out;
+    }
+    /* Styles pour l'image dans l'en-tête */
+    #img-Dr-header {
+        width: auto;
+        /*calc((9/16)*80%)*/
+        height: 100%;
+        padding: 0px;
+        margin: 0 auoto;
+    }
+    /* Centrer un élément (img+texte) */
+    .centre {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    /* Styles pour le texte de l'en-tête */
+    .header-text {
+        color: white;
+        width: 90%;
+        padding-left: 10px;
+        margin: 0 auto;
+    }
+    /* Styles pour la partie 1 */
+    .part1 {
+        font-size: 25px;
+        font-weight: 500;
+    }
+    /* Styles pour la partie 2 */
+    .part2 {
+        padding-left: 0px;
+    }
+    /* Styles pour les conteneurs de boîtes */
+    .boxs {
+        display: grid;
+        margin-top: 50px;
+    }
+    /* Styles pour une boîte */
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        height: 128px;
+        text-align: center;
+        background: #FFFFFF;
+        color: #049585;
+        cursor: pointer;
+        /* Ombre légère autour de la boîte */
+        box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.02);
+        /* Transition fluide lors du survol */
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    /* Styles pour une boîte lorsqu'elle est survolée */
+    .box:hover {
+        font-weight: bold;
+        /* Ombre plus foncé lors du survol */
+        box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.2);
+        /* arrière-plan avec un dégradé linéaire, allant de la couleur #83DDD3 à la couleur #CBF5F1, de gauche à droite.*/
+        background: linear-gradient(to right, #83DDD3, #CBF5F1);
+        /* fonction de temporisation cubique personnalisée 
+            à laquelle une transition se produit lorsqu'il y a un changement de style ou d'état.*/
+        transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+        /* animation qui dure 0.5 seconde et se répète une fois.L'animation est créée en utilisant la règle @keyframes*/
+        animation: Anime-Box 0.5s 1;
+    }
+    /*Création d'un effet d'animation où l'élément semble "rebondir" légèrement pendant la transition.*/
+    @keyframes Anime-Box {
+        0%,
+        100% {
+            transform: scale(1, 1);
+        }
+        25% {
+            transform: scale(0.9, 1.1);
+        }
+        50% {
+            transform: scale(1.1, 0.9);
+        }
+        75% {
+            transform: scale(0.95, 1.05);
+        }
+    }
+    /* Styles pour la section "à propos" */
+    .about {
+        display: block;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        width: 90%;
+    }
+    /* Styles pour le texte "à propos" */
+    .about-text {
+        display: block;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        width: 90%;
+    }
+    .about-text h2 {
+        font-size: 25px;
+        color: #049585;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    /* Styles pour l'équipe */
+    .team {
+        display: block;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        width: 90%;
+    }
+    /* Styles pour le texte de l'équipe */
+    .team-text {
+        display: block;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        width: 90%;
+    }
+    .team-text h2 {
+        font-size: 25px;
+        color: #049585;
+    }
+    /* Styles pour un élément */
+    .element {
+        width: 80%;
+        margin: auto;
+        margin-top: 60px;
+    }
+    /* Styles pour les retours d'information */
+    .feedback {
+        display: grid;
+        place-items: center;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        width: 90%;
+    }
+    .feedback h2 {
+        font-size: 25px;
+        color: #049585;
+        text-align: center;
+        margin: auto;
+        width: 90%;
+        padding-top: 50px;
+    }
+    /* Styles pour les commentaires */
+    .comments {
+        display: grid;
+        place-items: center;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        width: 90%;
+        margin-top: 20px;
+    }
+    .comment {
+        width: 100%;
+        font-size: 15px;
+    }
+    /* Styles pour le pied de page */
+    footer {
+        margin-top: 100px;
+        font-size: 13px;
+        /* Dégradé de couleur pour l'arrière-plan du pied de page */
+        background: linear-gradient(to right, #83DDD3, #CBF5F1);
+    }
+    /* Styles pour le contenu du pied de page */
+    .footer {
+        width: 90%;
+        margin: 0 auto;
+    }
+    /* Styles pour les images dans le pied de page */
+    .footer img {
+        width: 80px;
+    }
+    /* Styles pour les parties du pied de page */
+    .parts {
+        display: flex;
+        justify-content: space-between;
+    }
+    .part {
+        width: 25%;
+    }
+    /* Styles pour l'élément contenant les heures de travail */
+    #workh {
+        align-items: center;
+    }
+    /* Styles pour les liens de navigation dans le pied de page */
+    .nav-links {
+        display: grid;
+    }
+    /* Styles pour les droits d'auteur */
+    .rights p {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+
+}
+h2{
+    text-align: center;
+    margin: 20px;
+
+}
+.buttons-exercice{
+    text-align: center;
+}
+.btn{
+    padding: 15px;
+    width: 200px;
+    border: none;
+    background: #48d1cc;
+}
+.wide{
+    width: 400px ;
+}
+.btn-orange {
+    background: orange;
+   
+}
+.btn-round {
+    border-radius: 30px;
+}
